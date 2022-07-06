@@ -1,0 +1,16 @@
+<div class="form">
+    <h3>Program Form</h3>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Book Code" formControlName="book_code" class="full-width m-3">
+        <input type="text" placeholder="Title" formControlName="title" class="full-width m-3">
+        <input type="text" placeholder="Author" formControlName="author" class="full-width m-3">
+        <input type="text" placeholder="Publisher" formControlName="publisher" class="full-width m-3">
+        <input type="date" placeholder="Published Date" formControlName="published_date" class="full-width m-3">
+        <input type="text" placeholder="Category" formControlName="category" class="full-width m-3">
+        <input type="text" placeholder="Description" formControlName="description" class="full-width m-3">
+        <input type="text" placeholder="Copy" formControlName="copy" class="full-width m-3">
+        <input type="text" placeholder="ISBN" formControlName="isbn" class="full-width m-3">
+        <input type="text" placeholder="Status" formControlName="status" class="full-width m-3">
+        <button type="submit" class="m-3 btn">Save</button>
+    </form>
+</div>

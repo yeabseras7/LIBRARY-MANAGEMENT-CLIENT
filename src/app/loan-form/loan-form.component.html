@@ -1,0 +1,11 @@
+<div class="form">
+    <h3>Program Form</h3>
+    <form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="User" formControlName="user_id" class="full-width m-3">
+        <input type="text" placeholder="Book" formControlName="book_id" class="full-width m-3">
+        <input type="date" placeholder="Due Date" formControlName="due_date" class="full-width m-3">
+        <input type="date" placeholder="Loan Date" formControlName="loan_date" class="full-width m-3">
+        <input type="text" placeholder="Status" formControlName="status" class="full-width m-3">
+        <button type="submit" class="m-3 btn">Save</button>
+    </form>
+</div>
