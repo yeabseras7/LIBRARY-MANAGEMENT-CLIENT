@@ -1,2 +1,21 @@
 <app-nav-bar2></app-nav-bar2>
-<p>loan works!</p>
+<br>
+<br>
+<div class="add_btn">
+    <a routerLink="/add_loan">ADD LOAN</a>
+</div>
+<br>
+<br>
+<h1>Loan History</h1>
+<div class="list_loop" *ngFor="let loan of loans">
+        <div class="list">
+        <div class="details">
+            <h3>ID<span> {{loan.user.user_id}}</span></h3>
+            <h3>NAME<span> {{loan.user.first_name}} {{loan.user.last_name}}</span></h3>
+            <h3>DUE DATE<span> {{loan.due_date}}</span></h3>
+            <h3>BOOK<span> {{loan.book.title}}</span></h3>
+            <h3>STATUS<span *ngIf="loan.status == 'Due'" id="blue"> {{loan.status}}</span><span *ngIf="loan.status == 'Overdue'" id="red"> {{loan.status}}</span><span *ngIf="loan.status == 'Return'" id="green"> {{loan.status}}</span></h3>
+        </div>
+        </div>
+</div>
+

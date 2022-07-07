@@ -2,11 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-catalog',
-  templateUrl: './catalog.component.html',
-  styleUrls: ['./catalog.component.css']
+  selector: 'app-grad',
+  templateUrl: './grad.component.html',
+  styleUrls: ['./grad.component.css']
 })
-export class CatalogComponent implements OnInit {
+export class GradComponent implements OnInit {
   books: any[] = [];
   
   constructor(private http: HttpClient) { }
@@ -20,4 +20,5 @@ export class CatalogComponent implements OnInit {
       this.books = response.data;
     })
   }
+
 }

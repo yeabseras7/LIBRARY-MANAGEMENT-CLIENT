@@ -6,10 +6,12 @@
 .navigation2{
     display: flex;
     justify-content: space-between;
-    background-color: lime;
+    background-color: rgb(255, 255, 255);
 }
 
 .logo{
+    padding: 1%;
+    padding-left: 2%;
     width: 15%;
 }
 
@@ -27,8 +29,8 @@
 
 .options a{
     text-decoration: none;
-    color: white;
-    font-weight: 900;
+    color: rgb(32, 43, 73);
+    font-weight: 500;
     padding: 2%;
     height: fit-content;
 }
@@ -38,8 +40,9 @@
 }
 
 #logout{
-    background-color: red;
+    background-color: rgb(223, 45, 0);
     color: white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px 4px rgba(0, 0, 0, 0.418);
+    padding-left: 3%;
+    padding-right: 3%;
 }

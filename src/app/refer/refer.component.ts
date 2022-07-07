@@ -2,11 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-catalog',
-  templateUrl: './catalog.component.html',
-  styleUrls: ['./catalog.component.css']
+  selector: 'app-refer',
+  templateUrl: './refer.component.html',
+  styleUrls: ['./refer.component.css']
 })
-export class CatalogComponent implements OnInit {
+export class ReferComponent implements OnInit {
   books: any[] = [];
   
   constructor(private http: HttpClient) { }
@@ -18,6 +18,8 @@ export class CatalogComponent implements OnInit {
   loadBooks(): void{
     this.http.get('http://localhost:3000/books').subscribe((response: any) => {
       this.books = response.data;
+      console.log(response.data.category)
     })
   }
+
 }

@@ -1,0 +1,35 @@
+<app-nav-bar2></app-nav-bar2>
+<div class="form">
+    <h1>ADD TO CATALOG</h1>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <span>BOOK CODE</span>
+        <input type="text" placeholder="Book Code" formControlName="book_code">
+        <span>TITLE</span>
+        <input type="text" placeholder="Title" formControlName="title">
+        <span>AUTHOR</span>
+        <input type="text" placeholder="Author" formControlName="author">
+        <span>PUBLISHER</span>
+        <input type="text" placeholder="Publisher" formControlName="publisher">
+        <span>PUBLISHED DATE</span>
+        <input type="date" placeholder="Published Date" formControlName="published_date">
+        <span>CATEGORY</span>
+        <select name="status" id="status" formControlName="category">
+            <option value="Undegraduate" >Undegraduate</option>
+            <option value="Graduate" >Graduate</option>
+            <option value="Reference" >Reference</option>
+        </select>
+        <span>DESCRIPTION</span>
+        <input type="text" placeholder="Description" formControlName="description">
+        <span>COPY</span>
+        <input type="number" placeholder="Copy" formControlName="copy">
+        <span>ISBN</span>
+        <input type="text" placeholder="ISBN" formControlName="isbn">
+        <span>STATUS</span>
+        <select name="status" id="status" formControlName="status">
+            <option value="Available" >Available</option>
+            <option value="Unavailable" >Unavailable</option>=
+        </select>
+
+        <button type="submit">Save</button>
+    </form>
+</div>

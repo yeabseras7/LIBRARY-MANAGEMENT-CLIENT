@@ -1,0 +1,14 @@
+<app-nav-bar2></app-nav-bar2>
+<h1>Undergraduate Section</h1>
+<div class="list_loop" *ngFor="let book of books">
+    <div class="list" *ngIf="book.category == 'Undergraduate'">
+        <h1>{{book.title}}</h1>
+        <div class="details">
+            <h3>AUTHOR<span> {{book.author}}</span></h3>
+            <h3>COPY<span> {{book.copy}}</span></h3>
+            <h3>STATUS<span *ngIf="book.status == 'Unavailable'" id="red"> {{book.status}}</span><span *ngIf="book.status == 'Available'" id="green"> {{book.status}}</span></h3>
+        </div>
+
+    </div>
+</div>
+
