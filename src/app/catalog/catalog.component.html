@@ -1,2 +1,37 @@
 <app-nav-bar2></app-nav-bar2>
-<app-book-form></app-book-form>
+<router-outlet></router-outlet>
+
+<h1>Book Catalog</h1>
+<div class="catalogs">
+<section class="about">
+    <div class="main">
+        <div class="about-text">
+            <h2>Undergraduate <br> <span>Section</span></h2>
+            <button type="button" routerLink="/ugs">View All</button>
+        </div>
+    </div>
+</section>
+<section class="about">
+    <div class="main">
+        <div class="about-text">
+            <h2>Graduate <br> <span>Section</span></h2>
+            <button type="button" routerLink="/gs">View All</button>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="main">
+        <div class="about-text">
+            <h2>Reference <br> <span>Section</span></h2>
+            <button type="button" routerLink="/rs">View All</button>
+        </div>
+    </div>
+</section>
+</div>
+<br>
+<br>
+<br>
+<div class="add_btn">
+    <a routerLink="/add_book">ADD A BOOK</a>
+</div>

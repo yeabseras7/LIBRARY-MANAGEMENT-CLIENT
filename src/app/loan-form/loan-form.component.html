@@ -1,11 +1,27 @@
+<app-nav-bar2></app-nav-bar2>
+
+
 <div class="form">
-    <h3>Program Form</h3>
+    <h1>Loan Form</h1>
     <form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="User" formControlName="user_id" class="full-width m-3">
-        <input type="text" placeholder="Book" formControlName="book_id" class="full-width m-3">
-        <input type="date" placeholder="Due Date" formControlName="due_date" class="full-width m-3">
-        <input type="date" placeholder="Loan Date" formControlName="loan_date" class="full-width m-3">
-        <input type="text" placeholder="Status" formControlName="status" class="full-width m-3">
-        <button type="submit" class="m-3 btn">Save</button>
+        <span>USER</span><br>
+        <select name="users" id="users" formControlName="user_id">
+            <option *ngFor="let user of users" value={{user.id}} >{{user.first_name}} {{user.last_name}} {{user.user_id}} </option>
+        </select>
+        <span>BOOK</span>
+        <select name="books" id="books" formControlName="book_id">
+            <option *ngFor="let book of books" value={{book.id}} >{{book.title}}</option>
+        </select>
+        <span>LOAN DATE</span>
+        <input type="date" placeholder="Loan Date" formControlName="loan_date">
+        <span>DUE DATE</span>
+        <input type="date" placeholder="Due Date" formControlName="due_date">
+        <span>STATUS</span>
+        <select name="status" id="status" formControlName="status">
+            <option value="Due" >Due</option>
+            <option value="Overdue" >Overdue</option>
+            <option value="Return" >Return</option>
+        </select>
+        <button type="submit">Save</button>
     </form>
 </div>

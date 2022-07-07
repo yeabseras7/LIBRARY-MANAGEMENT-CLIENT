@@ -17,6 +17,9 @@ import { NavBar1Component } from './nav-bar1/nav-bar1.component';
 import { NavBar2Component } from './nav-bar2/nav-bar2.component';
 import { LoanFormComponent } from './loan-form/loan-form.component';
 import { BookFormComponent } from './book-form/book-form.component';
+import { UndergradComponent } from './undergrad/undergrad.component';
+import { GradComponent } from './grad/grad.component';
+import { ReferComponent } from './refer/refer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { BookFormComponent } from './book-form/book-form.component';
     NavBar1Component,
     NavBar2Component,
     LoanFormComponent,
-    BookFormComponent
+    BookFormComponent,
+    UndergradComponent,
+    GradComponent,
+    ReferComponent
   ],
   imports: [
     BrowserModule,

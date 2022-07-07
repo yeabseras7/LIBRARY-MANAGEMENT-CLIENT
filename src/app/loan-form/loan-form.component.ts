@@ -9,6 +9,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class LoanFormComponent implements OnInit {
   loanForm: FormGroup;
+  users: any[] = [];
+  books: any[] = [];
   @Output() submit = new EventEmitter<any>();
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
@@ -22,12 +24,25 @@ export class LoanFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.http.get('http://localhost:3000/users').subscribe((response: any) => {
+      this.users = response.data
+    })
+
+    this.http.get('http://localhost:3000/books').subscribe((response: any) => {
+      this.books = response.data
+    })
   }
 
   onSubmit(): void {
     const payload = this.loanForm.value;
     this.http.post('http://localhost:3000/book_loans', payload).subscribe((res) => {
-      console.log(res);
+      this.loanForm = this.fb.group({
+        user_id: '',
+        book_id: '',
+        due_date: '',
+        loan_date: '',
+        status: ''
+      })
       
     })
   }

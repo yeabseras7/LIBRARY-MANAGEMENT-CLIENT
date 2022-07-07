@@ -1,11 +1,13 @@
 h1{
-    margin-left: 2%;
+    margin-left:2% ;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    border-bottom: 1px solid #76F45B;
+    margin-right: 2%;
 }
 
 .list{
-    width: 95%;
+    width: 30%;
     margin: 2%;
     padding: 1%;
     box-shadow: inset 0 0 5px 0 rgba(30, 255, 0, 0.384);
@@ -24,8 +26,9 @@ h1{
     font-weight: 700;
 }
 .list span{
+    display: block;
     font-family: 'Montserrat', sans-serif;
-    color: #76F45B;
+    color: lime;
     font-weight: 600;
 }
 
@@ -36,19 +39,10 @@ h1{
 
 .details h3{
     width: 33%;
-    border-left: 8px solid #76F45B;
+    border-left: 8px solid lime;
     padding-left: 2%;
 }
 
 #red{
     color: red;
 }
-
-#blue{
-    color: blue;
-}
-
-#green{
-    color: #76F45B;
-}
-

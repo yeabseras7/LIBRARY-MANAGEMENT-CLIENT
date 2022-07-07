@@ -32,8 +32,19 @@ export class BookFormComponent implements OnInit {
 
   onSubmit(): void {
     const payload = this.bookForm.value;
-    this.http.post('http://localhost:3000/book_loans', payload).subscribe((res) => {
-      console.log(res);
+    this.http.post('http://localhost:3000/books', payload).subscribe((res) => {
+      this.bookForm = this.fb.group({
+        book_code: '',
+        title: '',
+        author: '',
+        publisher: '',
+        published_date: '',
+        category: '',
+        description: '',
+        copy: '',
+        isbn: '',
+        status: ''
+      })
       
     })
   }

@@ -1,12 +1,24 @@
-.land{
-    display: flex;
-    position: absolute;
-    top: 60%;
-    left:8%;
-	transform: translateY(-50%);
+.text{
+    width: 40%;
+    margin: 5%;
+    margin-left: 2%;
+    margin-top: 7%;
 }
-.land h1{
-    margin: 10px 20px;
-    font-size: 65px;
-    font-weight: bold;
+
+.text h1{
+    font-size: 40px;
+    line-height: normal;
+    font-weight: 900;
+}
+
+
+.img_land{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+}
+
+.img_land img{
+    width: 100%;
 }

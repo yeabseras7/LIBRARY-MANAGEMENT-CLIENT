@@ -1,14 +1,23 @@
-
-
-.land{
-    display: flex;
-    position: absolute;
-    top: 60%;
-    left:8%;
-	transform: translateY(-50%);
+*{
+    font-family: 'Montserrat', sans-serif;
 }
-.land h1{
-    margin: 10px 20px;
-    font-size: 65px;
-    font-weight: bold;
+
+.img_land{
+    width: 40%;
+}
+
+.img_land img{
+    width: 100%;
+}
+
+.text a{
+    text-decoration: none;
+    padding: 2.5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: #76F45B;
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+    border-radius: 5px;
 }

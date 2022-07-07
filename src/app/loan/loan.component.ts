@@ -9,7 +9,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class LoanComponent implements OnInit {
   loans: any[] = [];
-  @Output() submit = new EventEmitter<any>();
 
   constructor(private http: HttpClient, private fb: FormBuilder) { }
 
